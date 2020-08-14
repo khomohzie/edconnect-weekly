@@ -4,16 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
         <meta name="keywords" content="games, web development, apps, softwares">
         <title>About Me</title>
-        <style>
-            body {font-family: "Verdana", "Arial", "Helvetica", sans-serif}
-            hr {color: green; background-color: green; height: 3px; clear: left}
-            .pagetitle {font-size: 30px; margin: 0}
-            .tagline {margin: 2px; font-style: italic}
-            p {font-size: 13px}
-            a:link {color: blue}
-            a:visited {color: green}
-            a:hover {color: coral}
-        </style>
+        <link rel="stylesheet" type="text/css" href="style.css">       
     </head>
     <body>
         <div id="masthead">
@@ -25,26 +16,31 @@
         </div>
 
         <div id="topnav">
-            <a href="index.html" title="Home Page"><img src="pics/btn_home.gif" style="border: none"></a>
-            <a href="products.html" title="Games and Apps"><img src="pics/btn_products.gif" style="border: none"></a>
-            <a href="contact.html" title="Contact Me"><img src="pics/btn_contact.gif" style="border: none"></a>
-            <a href="challenge.html" title="About Me"><img src="pics/btn_about.gif" style="border: none"></a>
-            <hr>
+            <a href="index.html" title="Home Page"><img src="pics/btn_home.gif" class="hyper"></a>
+            <a href="products.html" title="Games and Apps"><img src="pics/btn_products.gif" class="hyper"></a>
+            <a href="contact.html" title="Contact Me"><img src="pics/btn_contact.gif" class="hyper"></a>
+            <a href="challenge.html" title="About Me"><img src="pics/btn_about.gif" class="hyper"></a>
+            
         </div>
+		<hr>
 
         <div id="main">
-            <h3 style="text-align: center; font-weight: bold; font-size: 20px; font-style: oblique; color: darkgreen">KNOW ME</h3>
-            <img src="pics/DSC_0258.jpg" height="120" style="float: left; padding-bottom: 12px; padding-right: 8px" alt="My Picture">
-            <span style="font-size: 13px">A student of Babcock University, studying Software Engineering, I am Daniel Komolafe with a keen interest for anything computer. This interest is definitely what informed my decision to set up this site in order to share tech products and information with geeky guys as myself as well as <span style="font-style: italic">not-geeky</span> guys who definitely have interest in gaming, keeping track of software development, learning stuff and also being up-to-date about changes in the digital world.<br>
-            <b>Let's chat:</b><br>
-            DANIEL KOMOLAFE @ <a href="https://www.facebook.com/" style="text-decoration: none">facebook.com</a><br>
-            KHOMOHZIE @ <a href="https://twitter.com/" style="text-decoration: none">twitter.com</a>
-            </span>
+            <div id="abouttitle">KNOW ME</div>
+            <img src="pics/DSC_0258.jpg" height="150" id="mypic" alt="My Picture">
+            <div id="body">A student of Babcock University, studying Software Engineering, I am Daniel Komolafe with a keen interest for anything computer. This interest is definitely what informed my decision to set up this site in order to share tech products and information with geeky guys as myself as well as <span style="font-style: italic">not-geeky</span> guys who definitely have interest in gaming, keeping track of software development, learning stuff and also being up-to-date about changes in the digital world.<br>
+			<b>Let's chat:</b>
+            <div id="list">
+				<ul>
+					<li>DANIEL KOMOLAFE @ <a href="https://www.facebook.com/" style="text-decoration: none">facebook.com</a></li>
+					<li>KHOMOHZIE @ <a href="https://twitter.com/" style="text-decoration: none">twitter.com</a></li>
+				</ul>
+			</div>
+            </div>
         </div>
 
         <div id="bottomnav">
             <hr>
-            <p style="margin: 0px; text-align: center">
+            <p id="bnav">
                 <a href="index.html" title="Home Page">Home</a>
                 <a href="products.html" title="Games and Apps">Products</a>
                 <a href="contact.html" title="Contact Me">Contact Me</a>
