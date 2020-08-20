@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+        <title>Project Explorer</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        
+        <div class="container">
+            <nav>
+                <div class="nav-row">
+                    <div class="col-1">
+                    <a href="#" class="brand">Project Explorer</a>&nbsp;&nbsp;&nbsp;
+                    <form method="POST" action="" enctype="text/plain">
+                        <input type="search" size="20px" placeholder="Search Projects">
+                        <input type="submit" class="btn" value="Search">
+                    </form>
+                    &nbsp;&nbsp;<a href="projects.html" title="Projects" id="project-link" class="other-nav-links">Projects</a>&nbsp;&nbsp;
+                    <a href="createProject.html" title="Submit Project" id="submit-link" class="other-nav-links">Submit</a>
+                    </div>
+                    <div class="col-2">
+                        <a href="register.html" title="Sign up" class="other-nav-links">Sign up</a>&nbsp;&nbsp;
+                        <a href="login.html" title="Login Page" class="other-nav-links">Login</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <p style="margin: 40px 40px 20px 146px; font-weight: bold; font-size: 23px">Project Gallery</p>
+
+        <div class="search-main">
+
+            <div class="row-search">
+                <div class="search1">
+                <form method="POST" action="" enctype="text/plain">
+                    <input type="search" size="120px" placeholder="Search Project name, authors, abstract, tags">
+                    <input type="submit" id="search-btn" value="Search by">
+
+                    <select>
+                        <option>Name</option>
+                    </select>
+
+                    <input type="submit" value="Submit" class="login-submit">
+
+                </form>
+                </div>
+            </div>
+        </div>
+
+        <p style="margin: 30px auto 0 150px">All Projects <small>(4 results)</small></p>
+
+        <div class="call-outs-container">
+            <div class="call-out">
+                <p><span style="font-size: 20px; color: dodgerblue; font-weight: bold">Project 1</span><br>
+                <small>James Li, Ade Brian</small></p>
+                <p>This project is to explore computer networking, find problems with networking in the 21st century.</p>
+                <p class="hash">#javascript, #mongodb</p>
+            </div>
+
+            <div class="call-out">
+                <p><span style="font-size: 20px; color: dodgerblue; font-weight: bold">Project 2</span><br>
+                <small>Fried Lim, Tola Daniel</small></p>
+                <p>Researching the health status of the less-privileged people, their access to health care and solutions.</p>
+                <p class="hash">#ejs, #ci</p>
+            </div>
+
+            <div class="call-out">
+                <p><span style="font-size: 20px; color: dodgerblue; font-weight: bold">Project 3</span><br>
+                <small>Ben Rice, Ade Sola</small></p>
+                <p>A survey on information transmission in Nigeria, the problems associated with it and possible solutions.</p>
+                <p class="hash">#css, #html</p>
+            </div>
+
+            <div class="call-out">
+                <p><span style="font-size: 20px; color: dodgerblue; font-weight: bold">Project 4</span><br>
+                <small>Henry James, Bola Ade</small></p>
+                <p>A survey on information transmission in Nigeria, the problems associated with it and possible solutions.</p>
+                <p class="hash">#yaml, #ejs</p>
+            </div>
+        </div>
+                    
+        <div id="copy" style="text-align: right">
+            <small>
+                Project Explorer &copy; 2020 . <span style="color: #000">Edconnect</span>
+            </small>
+        </div>
+    </body>
+</html>            
