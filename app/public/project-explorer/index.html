@@ -3,74 +3,115 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
         <title>Project Explorer</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     </head>
     <body>
 
-        <div class="container">
-            <nav>
-                <div class="nav-row">
-                    <div class="col-1">
-                    <a href="#" class="brand">Project Explorer</a>&nbsp;&nbsp;&nbsp;
-                    <form method="POST" action="" enctype="text/plain">
-                        <input type="search" size="20px" placeholder="Search Projects">
-                        <input type="submit" class="btn" value="Search">
-                    </form>
-                    &nbsp;&nbsp;<a href="projects.html" title="Projects" id="project-link" class="other-nav-links">Projects</a>&nbsp;&nbsp;
-                    <a href="createProject.html" title="Submit Project" id="submit-link" class="other-nav-links">Submit</a>
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+            <a href="#" class="navbar-brand">Project Explorer</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#responsive-nav" aria-controls="#responsive-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="#responsive-nav">
+                <form class="form-inline my-2 my-lg-0 pull-xs-left" method="POST" action="" enctype="text/plain">
+                    <input class="form-control" type="search" aria-label="Search" placeholder="Search Projects">&nbsp;
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html" title="Projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="createProject.html" title="Submit Project">Submit</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav mr-sm-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html" title="Sign up">Sign up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html" title="Login Page">Login</a>
+                    </li>
+                </ul>    
+            </div>
+        </nav>
+        
+        <main role="main">
+
+            <div class="jumbotron" style="margin: 10px 160px 20px 160px">
+                <h2>Welcome to Project Explorer</h2>
+                <p class="lead">
+                    Project Explorer is a repository for final year projects across all departments at your institution. You can submit your project and search projects submitted by others to learn from.
+                </p>
+                
+                <p>
+                    <button class="btn btn-primary" type="button" href="#" role="button">Get Started</button>
+                    <button class="btn btn-secondary" type="button" role="button"></a>Login</button>
+                </p>
+            </div>
+
+            <div class="container">
+                <div class="row" style="margin: 10px 16px 20px 16px">
+                    
+                    <div class="col-md-3 order-4">
+                        <div class="card" style="padding: 20px">
+                            <div class="card-block">
+                                <h6 class="card-title" style="font-size: 20px; margin-bottom: 0px; color: dodgerblue">Project 1</h6>
+                                <small class="text-muted">James Li, Ade Brian</small>
+                                <p class="card-text">This project is to explore computer networking, find problems with networking in the 21st century.<br>
+                                <span style="color: dodgerblue">#javascript, #mongodb</span></p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-2">
-                        <a href="register.html" title="Sign up" class="other-nav-links">Sign up</a>&nbsp;&nbsp;
-                        <a href="login.html" title="Login Page" class="other-nav-links">Login</a>
+
+                    <div class="col-md-3 order-3">
+                        <div class="card" style="padding: 20px">
+                            <div class="card-block">
+                                <h6 class="card-title" style="font-size: 20px; margin-bottom: 0px; color: dodgerblue">Project 2</h6>
+                                <small class="text-muted">Fried Lim, Tola Daniel</small>
+                                <p class="card-text">Researching the health status of the less-privileged people, their access to health care and solutions.<br>
+                                <span style="color: dodgerblue">#ejs, #ci</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 order-2">
+                        <div class="card" style="padding: 20px">
+                            <div class="card-block">
+                                <h6 class="card-title" style="font-size: 20px; margin-bottom: 0px; color: dodgerblue">Project 3</h6>
+                                <small class="text-muted">Ben Rice, Ade Sola</small>
+                                <p class="card-text">A survey on information transmission in Nigeria, the problems associated with it and possible solutions.<br>
+                                <span style="color: dodgerblue">#css, #html</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 order-1">
+                        <div class="card" style="padding: 20px">
+                            <div class="card-block">
+                                <h6 class="card-title" style="font-size: 20px; margin-bottom: 0px; color: dodgerblue">Project 4</h6>
+                                <small class="text-muted">Henry James, Bola Ade</small>
+                                <p class="card-text">A survey on information transmission in Nigeria, the problems associated with it and possible solutions.<br>
+                                <span style="color: dodgerblue">#yaml, #ejs</span></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </nav>
-        </div>
+            </div>
         
-        <div class="main">
-            <h2>Welcome to Project Explorer</h2>
-            Project Explorer is a repository for final year projects across all departments at your institution. You can submit your project and search projects submitted by others to learn from.
-            <p>
-                <button href="#" id="welcome-btn1" type="button">Get Started</button>
-                <button href="login.html" id="welcome-btn2" type="button">Login</button>
-            </p>
-        </div>
-
-
-        <div class="call-outs-container">
-            <div class="call-out">
-                <p><span style="font-size: 20px; color: dodgerblue; font-weight: bold">Project 1</span><br>
-                <small>James Li, Ade Brian</small></p>
-                <p>This project is to explore computer networking, find problems with networking in the 21st century.</p>
-                <p class="hash">#javascript, #mongodb</p>
+        </main>
+           
+        <footer>
+            <div style="background-color: lightgrey; text-align: right; margin: 0px 160px 0px 160px; padding: 5px 20px 5px 20px">
+                <small class="text-muted">
+                    Project Explorer &copy; 2020 . <span style="color: #000">Edconnect</span>
+                </small>
             </div>
-
-            <div class="call-out">
-                <p><span style="font-size: 20px; color: dodgerblue; font-weight: bold">Project 2</span><br>
-                <small>Fried Lim, Tola Daniel</small></p>
-                <p>Researching the health status of the less-privileged people, their access to health care and solutions.</p>
-                <p class="hash">#ejs, #ci</p>
-            </div>
-
-            <div class="call-out">
-                <p><span style="font-size: 20px; color: dodgerblue; font-weight: bold">Project 3</span><br>
-                <small>Ben Rice, Ade Sola</small></p>
-                <p>A survey on information transmission in Nigeria, the problems associated with it and possible solutions.</p>
-                <p class="hash">#css, #html</p>
-            </div>
-
-            <div class="call-out">
-                <p><span style="font-size: 20px; color: dodgerblue; font-weight: bold">Project 4</span><br>
-                <small>Henry James, Bola Ade</small></p>
-                <p>A survey on information transmission in Nigeria, the problems associated with it and possible solutions.</p>
-                <p class="hash">#yaml, #ejs</p>
-            </div>
-        </div>
-        
-        <div id="copy" style="text-align: right">
-            <small>
-                Project Explorer &copy; 2020 . <span style="color: #000">Edconnect</span>
-            </small>
-        </div>
+        </footer>
+    
     </body>
 </html>

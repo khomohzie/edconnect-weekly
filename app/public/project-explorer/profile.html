@@ -3,82 +3,101 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
         <title>Project Explorer</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     </head>
     <body>
-        <div class="container">
-            <nav>
-                <div class="nav-row">
-                    <div class="col-1">
-                    <a href="#" class="brand">Project Explorer</a>&nbsp;&nbsp;&nbsp;
-                    <form method="POST" action="" enctype="text/plain">
-                        <input type="search" size="20px" placeholder="Search Projects">
-                        <input type="submit" class="btn" value="Search">
-                    </form>
-                    &nbsp;&nbsp;<a href="projects.html" title="Projects" id="project-link" class="other-nav-links">Projects</a>&nbsp;&nbsp;
-                    <a href="createProject.html" title="Submit Project" id="submit-link" class="other-nav-links">Submit</a>
-                    </div>
-                    <div class="col-2">
-                        <a href="register.html" title="Sign up" class="other-nav-links">Sign up</a>&nbsp;&nbsp;
-                        <a href="login.html" title="Login Page" class="other-nav-links">Login</a>
-                    </div>
-                </div>
-            </nav>
-        </div>
+        
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+            <a href="#" class="navbar-brand">Project Explorer</a>
 
-        <p style="margin: 40px auto 20px 167px"><span style="font-weight: 200; font-size: 20px">Akin Emmanuel</span>
-            <small>akinem@edconnect.ng</small>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#responsive-nav" aria-controls="#responsive-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="#responsive-nav">
+                <form class="form-inline my-2 my-lg-0 pull-xs-left" method="POST" action="" enctype="text/plain">
+                    <input class="form-control" type="search" aria-label="Search" placeholder="Search Projects">&nbsp;
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html" title="Projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="createProject.html" title="Submit Project">Submit</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav mr-sm-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html" title="Sign up">Sign up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html" title="Login Page">Login</a>
+                    </li>
+                </ul>    
+            </div>
+        </nav>
+
+        <p style="margin: 40px auto 20px 138px"><span style="font-weight: bold; font-size: 20px">Akin Emmanuel</span>
+            <small class="text-muted">akinem@edconnect.ng</small>
         </p>
         
-        <div id="main-profile">
-            
-            <div id="col-prog">
-                Program<br>
-                Computer Science
-            </div>
+        <div class="container">
+            <div class="row" style="background-color: lightgray; margin: 0px auto 20px 20px; padding: 5px 10px 5px 10px">
+                <div class="col-md-4">
+                    Program<br>
+                    Computer Science
+                </div>
 
-            <div id="col-matric">
-                Matriculation number<br>
-                14/1312
-            </div>
+                <div class="col-md-4">
+                    Matriculation number<br>
+                    14/1312
+                </div>
 
-            <div id="grad-year">
-                Graduation Year<br>
-                2018
-            </div>
+                <div class="col-md-4">
+                    Graduation Year<br>
+                    2018
+                </div>
             
             
         </div>
 
-        <p style="margin: 40px auto 20px 167px"><span style="font-weight: 200; font-size: 20px">Update Profile</span></p>
+        <p style="margin: 40px auto 20px 20px"><span style="font-size: 20px">Update Profile</span></p>
+        <hr>
             
-        <div class="container-register">
+        <div class="container">
             
             <form method="POST" action="" enctype="text/plain">
-                <div class="row">
-                    <div class="col-reg1">
-                    
-                        <p class="form-para">First Name</p>
-                        <p style="margin-top: 0px"><input type="text" name="first_name" size="74" maxlength="30" value="Akin"></p>
-                    
-                        <p class="form-para2">Email Address</p>
-                        <p style="margin-top: 0px"><input type="email" name="email" size="74" maxlength="50" value="akinem@edconnect.ng"></p>
-                    
-                        <p class="form-para3">Matriculation Number</p>
-                        <input type="text" name="matric" size="74" maxlength="8" value="14/1312">
-
-                        <p>
-                                <input type="submit" value="Update Profile" class="login-submit">
-                        </p>
-                    
+                <div class="row" style="margin-right: 10%; margin-left: 10%">
+                    <div class="col-md-6">
+                        
+                        <fieldset class="form-group">
+                            <label>First Name</label>
+                            <input class="form-control" type="text" name="first_name" size="74" maxlength="30" value="Akin"></p>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label>Email Address</label>
+                            <input class="form-control" type="email" name="email" size="74" maxlength="50" value="akinem@edconnect.ng"></p>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label>Matriculation Number</label>
+                            <input class="form-control" type="text" name="matric" size="74" maxlength="8" value="14/1312">
+                        </fieldset>
+                        <button class="btn btn-primary" type="submit">Update Profile</button>
+                                
                     </div>
                 
-                    <div class="col-reg2">
-                        <p class="form-para4">Last Name</p>
-                        <p style="margin-top: 0px"><input type="text" name="last_name" size="74" maxlength="30" value=" Emmanuel"></p>
-                    
-                        <p class="form-para5">Program</p>
-                            <select>
+                    <div class="col-md-6">
+
+                        <fieldset class="form-group">
+                            <label>Last Name</label>
+                            <input class="form-control" type="text" name="last_name" size="74" maxlength="30" value=" Emmanuel"></p>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label>Program</label>
+                            <select class="form-control">
                                 <option>Computer Science</option>
                                 <option>(B. A. Hons), HISTORY & INTERNATIONAL STUDIES</option>
                                 <option>B.A .FRENCH AND INTERNATIONAL RELATIONS</option>
@@ -111,10 +130,10 @@
                                 <option>English Studies (B.A)</option>
                                 <option>MEDICINE (MBBS)</option>
                             </select>
-                     
-                    
-                        <p class="form-para6" style="margin-top: 20px">Graduation Year</p>
-                            <select>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label style="margin-top: 17px">Graduation Year</label>
+                            <select class="form-control">
                                 <option>2018</option>
                                 <option>2020</option>
                                 <option>2019</option>
@@ -135,33 +154,38 @@
                                 <option>2004</option>
                                 <option>2003</option>
                             </select>
-                   
+                        </fieldset>
+
                     </div>
                 </div>
             </form>
         </div>
 
-            <p style="margin: 40px auto 20px 167px"><span style="font-weight: 200; font-size: 20px">Change Password</span></p>
+            <p style="margin: 40px auto 20px 20px"><span style="font-size: 20px">Change Password</span></p>
+            <hr>
             <form method="POST" action="" enctype="text/plain">
 
-                <div id="row-change-password">
-                    <div id="col-reg1">
-                        <p class="form-para">Current Password</p>
-                        <p style="margin-top: 0px"><input type="password" name="pword1" size="50" maxlength="30" placeholder="Current Password"></p>
-
-                        <p>
-                            <input type="submit" value="Change Password" class="login-submit">
-                        </p>
+                <div class="row" style="margin-right: 11%; margin-left: 11%">
+                    <div class="col-md-4">
+                        <fieldset class="form-group">
+                            <label>Current Password</label>
+                            <input class="form-control" type="password" name="pword1" maxlength="30" placeholder="Current Password">
+                        </fieldset>
+                        <button class="btn btn-primary" type="submit">Change Password</button>
                     </div>
 
-                    <div id="col-reg2">
-                        <p class="form-para">New Password</p>
-                        <p style="margin-top: 0px"><input type="password" name="pwordn1" size="50" maxlength="30" placeholder="Your new password"></p>
+                    <div class="col-md-4">
+                        <fieldset class="form-group">
+                            <label>New Password</label>
+                            <input class="form-control" type="password" name="pwordn1" maxlength="30" placeholder="Your new password">
+                        </fieldset>
                     </div>
 
-                    <div id="col-reg3">
-                        <p class="form-para">Confirm Password</p>
-                        <p style="margin-top: 0px"><input type="password" name="pwordn2" size="50" maxlength="30" placeholder="Confirm new password"></p>
+                    <div class="col-md-4">
+                        <fieldset class="form-group">
+                            <label>Confirm Password</label>
+                            <input class="form-control" type="password" name="pwordn2" maxlength="30" placeholder="Confirm new password">
+                        </fieldset>
                     </div>
                 
                 </div>
@@ -169,10 +193,12 @@
             </form>
         </div>
             
-        <div id="copy" style="text-align: right">
-            <small>
-                Project Explorer &copy; 2020 . <span style="color: #000">Edconnect</span>
-            </small>
-        </div>
+        <footer>
+            <div style="background-color: lightgrey; text-align: right; margin: 20px 160px 0px 160px; padding: 5px 20px 5px 20px">
+                <small class="text-muted">
+                    Project Explorer &copy; 2020 . <span style="color: #000">Edconnect</span>
+                </small>
+            </div>
+        </footer>
     </body>
 </html>

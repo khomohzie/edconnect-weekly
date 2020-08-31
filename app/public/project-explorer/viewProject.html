@@ -3,91 +3,109 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
         <title>Project Explorer</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     </head>
     <body>
             
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+            <a href="#" class="navbar-brand">Project Explorer</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#responsive-nav" aria-controls="#responsive-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="#responsive-nav">
+                <form class="form-inline my-2 my-lg-0 pull-xs-left" method="POST" action="" enctype="text/plain">
+                    <input class="form-control" type="search" aria-label="Search" placeholder="Search Projects">&nbsp;
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html" title="Projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="createProject.html" title="Submit Project">Submit</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav mr-sm-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html" title="Sign up">Sign up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html" title="Login Page">Login</a>
+                    </li>
+                </ul>    
+            </div>
+        </nav>
+
+        <p style="margin: 40px 0 20px 146px; font-weight: bold; font-size: 30px">Project 4</p>
+
         <div class="container">
-            <nav>
-                <div class="nav-row">
-                    <div class="col-1">
-                    <a href="#" class="brand">Project Explorer</a>&nbsp;&nbsp;&nbsp;
-                    <form method="POST" action="" enctype="text/plain">
-                        <input type="search" size="20px" placeholder="Search Projects">
-                        <input type="submit" class="btn" value="Search">
-                    </form>
-                    &nbsp;&nbsp;<a href="projects.html" title="Projects" id="project-link" class="other-nav-links">Projects</a>&nbsp;&nbsp;
-                    <a href="createProject.html" title="Submit Project" id="submit-link" class="other-nav-links">Submit</a>
-                    </div>
-                    <div class="col-2">
-                        <a href="register.html" title="Sign up" class="other-nav-links">Sign up</a>&nbsp;&nbsp;
-                        <a href="login.html" title="Login Page" class="other-nav-links">Login</a>
+            <div class="row  align-items-center" style="background-color: lightgray; margin: 0px auto 20px 20px; padding: 5px 0px 5px 10px">
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Created by<br>
+                            Ade James, Brian Olaoluwa 
+                        </div>
+
+                        <div class="col-md-4">
+                            Date Created<br>
+                            03/03/2020
+                        </div>
+
+                        <div class="col-md-4">
+                            Last Updated<br>
+                            04/04/2020
+                        </div>
                     </div>
                 </div>
-            </nav>
+                
+                <div class="col-md-2">
+                    <button class="btn btn-primary">Edit Project</button>
+                </div>
+            </div>        
         </div>
-
-        <p style="margin: 40px auto 20px 167px"><span style="font-weight: 200; font-size: 20px">Project 4</span></p>
-
-        <div id="main-profile">
             
-            <div id="col-prog">
-                Created by<br>
-                Ade James, Brian Olaoluwa 
-            </div>
+        <div class="container">
 
-            <div id="col-matric">
-                Date Created<br>
-                03/03/2020
-            </div>
+            <div class="row">
 
-            <div id="grad-year">
-                Last Updated<br>
-                04/04/2020
-            </div>
-
-            <div id="view-project">
-                <input type="submit" value="View Project" class="login-submit">
-            </div>
-    
-        </div> 
-            
-        <div class="container-edit">
-
-            <div class="row-edit">
-
-                <div class="col-edit" style="padding-right: 10px">
+                <div class="col-md-6" style="padding-right: 10px; padding-left: 32px">
                     
                     <h3>Project Abstract</h3>
                     This project is to explore computer networking, find problems with networking in the 21st century and suggest solutions to improve it.
                 
                 </div>
 
-                <div class="col-manage">
+                <div class="col-md-6">
                     
                     <h3>Project Details</h3>
                     
-                    <div id="uploaded-project1" style="background-color: lightgray; padding: 5px 20px 5px 20px">
-                    Author(s)
-                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <b>Author(s)</b>
+                        </div>
 
-                    <div id="uploaded-project2" style="padding: 10px; border: lightgray ridge">
-                    Ade James<br>
-                    Brian Olaoluwa
-                    </div>
+                        <div class="card-block">
+                            <p class="card-text" style="padding: 10px 0 0 20px">Ade James</p>
+                            <hr>
+                            <p class="card-text" style="padding: 0 0 10px 20px">Brian Olaoluwa</p>
+                        </div>
 
-                    <div id="uploaded-project1" style="background-color: lightgray; padding: 5px 20px 5px 20px">
-                        <small style="color: dodgerblue">#yaml, #ejs</small>
-                    </div>
-
-                    <p></p>
-
-                    <div id="uploaded-project1" style="background-color: lightgray; padding: 5px 20px 5px 20px">
-                        Project files
-                    </div>
-
-                    <div id="uploaded-project2" style="padding: 20px; border: lightgray ridge; text-align: center">
-                        No file uploaded yet
+                        <div class="card-footer">
+                            <small style="color: dodgerblue">#yaml, #ejs</small>
+                        </div>
+                    
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            <b>Project files</b>
+                        </div>
+                        <div class="card-block" style="text-align: center; padding-top: 10px; padding-bottom: 10px">
+                            <p class="card-text">No file uploaded yet</p>
+                        </div>
                     </div>
 
                 </div>
@@ -96,10 +114,12 @@
         </div>
 
         
-        <div id="copy" style="text-align: right">
-            <small>
-                Project Explorer &copy; 2020 . <span style="color: #000">Edconnect</span>
-            </small>
-        </div>
+        <footer>
+            <div style="background-color: lightgrey; text-align: right; margin: 20px 0px 0px 16px; padding: 5px 20px 5px 20px">
+                <small class="text-muted">
+                    Project Explorer &copy; 2020 . <span style="color: #000">Edconnect</span>
+                </small>
+            </div>
+        </footer>
     </body>
 </html>

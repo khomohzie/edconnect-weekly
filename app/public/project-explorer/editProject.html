@@ -3,103 +3,122 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
         <title>Project Explorer</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     </head>
     <body>
+           
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+            <a href="#" class="navbar-brand">Project Explorer</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#responsive-nav" aria-controls="#responsive-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="#responsive-nav">
+                <form class="form-inline my-2 my-lg-0 pull-xs-left" method="POST" action="" enctype="text/plain">
+                    <input class="form-control" type="search" aria-label="Search" placeholder="Search Projects">&nbsp;
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html" title="Projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="createProject.html" title="Submit Project">Submit</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav mr-sm-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html" title="Sign up">Sign up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html" title="Login Page">Login</a>
+                    </li>
+                </ul>    
+            </div>
+        </nav>
+
+        <p style="margin: 40px auto 20px 138px"><span style="font-weight: bold; font-size: 20px">Project 4</span></p>
+        
         <div class="container">
-            <nav>
-                <div class="nav-row">
-                    <div class="col-1">
-                    <a href="#" class="brand">Project Explorer</a>&nbsp;&nbsp;&nbsp;
-                    <form method="POST" action="" enctype="text/plain">
-                        <input type="search" size="20px" placeholder="Search Projects">
-                        <input type="submit" class="btn" value="Search">
-                    </form>
-                    &nbsp;&nbsp;<a href="projects.html" title="Projects" id="project-link" class="other-nav-links">Projects</a>&nbsp;&nbsp;
-                    <a href="createProject.html" title="Submit Project" id="submit-link" class="other-nav-links">Submit</a>
-                    </div>
-                    <div class="col-2">
-                        <a href="register.html" title="Sign up" class="other-nav-links">Sign up</a>&nbsp;&nbsp;
-                        <a href="login.html" title="Login Page" class="other-nav-links">Login</a>
+            <div class="row  align-items-center" style="background-color: lightgray; margin: 0px auto 20px 20px; padding: 5px 0px 5px 10px">
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Created by<br>
+                            Ade James, Brian Olaoluwa 
+                        </div>
+
+                        <div class="col-md-4">
+                            Date Created<br>
+                            03/03/2020
+                        </div>
+
+                        <div class="col-md-4">
+                            Last Updated<br>
+                            04/04/2020
+                        </div>
                     </div>
                 </div>
-            </nav>
+                <div class="col-md-2">
+                    <button class="btn btn-primary">View Project</button>
+                </div>
+            </div>        
         </div>
 
-        <p style="margin: 40px auto 20px 167px"><span style="font-weight: 200; font-size: 20px">Project 4</span></p>
-        
-        <div id="main-profile">
-            
-            <div id="col-prog">
-                Created by<br>
-                Ade James, Brian Olaoluwa 
-            </div>
-
-            <div id="col-matric">
-                Date Created<br>
-                03/03/2020
-            </div>
-
-            <div id="grad-year">
-                Last Updated<br>
-                04/04/2020
-            </div>
-
-            <div id="view-project">
-                <input type="submit" value="View Project" class="login-submit">
-            </div>
-
-        </div>
-
-        <div class="container-edit">
+        <div class="container">
 
             <form method="POST" action="" enctype="text/plain">
 
-                <div class="row-edit">
+                <div class="row" style="margin: 0px -16px 0px 3px">
 
-                    <div class="col-edit">
+                    <div class="col-md-6">
 
                         <h3>Edit Project</h3>
+                        <hr>
                         
-                            <p>
-                                Project Name:<br>
-                                <input type="text" name="title" size="74" maxlength="50" value="Technology">
-                            </p>
+                            <fieldset class="form-group">
+                                <label>Project Name</label>
+                                <input class="form-control" type="text" name="title" size="74" maxlength="50" value="Technology">
+                            </fieldset>
                         
-                            <p>
-                                Project Abstract:<br>
-                                <textarea name="abs" size="20" maxlength="100" rows="10" cols="56" placeholder="Maximum of 100 characters">Researching the areas technology has helped in the world, access of Nigerians to technology and solutions to technological problems</textarea>
-                            </p>
+                            <fieldset class="form-group">
+                                <label>Project Abstract</label>
+                                <textarea class="form-control" name="abs" size="20" maxlength="100" rows="10" cols="56" placeholder="Maximum of 100 characters">Researching the areas technology has helped in the world, access of Nigerians to technology and solutions to technological problems</textarea>
+                            </fieldset>
 
-                            <p>
-                                Author(s):<br>
-                                <input type="text" name="auth" size="74" maxlength="50" value="Ade James, Brian Olaoluwa">
-                            </p>
+                            <fieldset class="form-group">
+                                <label>Author(s)</label>
+                                <input class="form-control" type="text" name="auth" size="74" maxlength="50" value="Ade James, Brian Olaoluwa">
+                            </fieldset>
 
-                            <p>
-                                Tag(s):<br>
-                                <input type="text" name="tag" size="74" maxlength="50" value="#yaml, #ejs">
-                            </p>
-
-                            <p>
-                                <input type="submit" value="Save" class="login-submit">
-                            </p>
+                            <fieldset class="form-group">
+                                <label>Tag(s)</label>
+                                <input class="form-control" type="text" name="tag" size="74" maxlength="50" value="#yaml, #ejs">
+                            </fieldset>
+                            <button class="btn btn-primary" type="submit">Save</button>
                         
                     </div>
 
-                    <div class="col-manage">
+                    <div class="col-md-6">
 
                         <h3>Manage Project files</h3>
-                            <input type="text" size="38px" placeholder="Click to open file browser"><input type="file" name="choose_file" value="Choose File">
-                        </p>
+                        <hr>
+                        
+                        <fieldset class="form-group">
+                            <input class="form-control-file" type="file">
+                        </fieldset>
 
-                        <div id="uploaded-project1" style="background-color: lightgray; padding: 5px 20px 5px 20px">
-                            Project files
+                        <div class="card">
+                            <div class="card-header">
+                                <b>Project files</b>
+                            </div>
+                            <div class="card-block" style="text-align: center; padding-top: 10px; padding-bottom: 10px">
+                                <p class="card-text">No file uploaded yet</p>
+                            </div>
                         </div>
-                        <div id="uploaded-project2" style="padding: 20px; border: lightgray ridge; text-align: center">
-                            No file uploaded yet
-                        </div>
-                    
                     </div>
 
                 </div>
@@ -109,10 +128,12 @@
         </div>
         
         
-        <div id="copy" style="text-align: right">
-            <small>
-                Project Explorer &copy; 2020 . <span style="color: #000">Edconnect</span>
-            </small>
-        </div>
+        <footer>
+            <div style="background-color: lightgrey; text-align: right; margin: 20px 160px 0px 160px; padding: 5px 20px 5px 20px">
+                <small class="text-muted">
+                    Project Explorer &copy; 2020 . <span style="color: #000">Edconnect</span>
+                </small>
+            </div>
+        </footer>
     </body>
 </html>            

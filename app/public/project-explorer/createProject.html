@@ -3,63 +3,82 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
         <title>Project Explorer</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     </head>
     <body>
-        <div class="container">
-            <nav>
-                <div class="nav-row">
-                    <div class="col-1">
-                    <a href="#" class="brand">Project Explorer</a>&nbsp;&nbsp;&nbsp;
-                    <form method="POST" action="" enctype="text/plain">
-                        <input type="search" size="20px" placeholder="Search Projects">
-                        <input type="submit" class="btn" value="Search">
-                    </form>
-                    &nbsp;&nbsp;<a href="projects.html" title="Projects" id="project-link" class="other-nav-links">Projects</a>&nbsp;&nbsp;
-                    <a href="createProject.html" title="Submit Project" id="submit-link" class="other-nav-links">Submit</a>
-                    </div>
-                    <div class="col-2">
-                        <a href="register.html" title="Sign up" class="other-nav-links">Sign up</a>&nbsp;&nbsp;
-                        <a href="login.html" title="Login Page" class="other-nav-links">Login</a>
-                    </div>
-                </div>
-            </nav>
-        </div>
+            
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+            <a href="#" class="navbar-brand">Project Explorer</a>
 
-        <div id="main-create-project">
-            <form method="POST" action="" enctype="text/plain">
-                <h3>Submit Project</h3>
-                <p>
-                    Project Name<br>
-                    <input type="text" name="title" size="74" maxlength="50" placeholder="Enter project name">
-                </p>
-                    
-                <p>
-                    Project Abstract:<br>
-                    <textarea name="abs" size="20" maxlength="100" rows="10" cols="56"></textarea>
-                </p>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#responsive-nav" aria-controls="#responsive-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="#responsive-nav">
+                <form class="form-inline my-2 my-lg-0 pull-xs-left" method="POST" action="" enctype="text/plain">
+                    <input class="form-control" type="search" aria-label="Search" placeholder="Search Projects">&nbsp;
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html" title="Projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="createProject.html" title="Submit Project">Submit</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav mr-sm-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html" title="Sign up">Sign up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html" title="Login Page">Login</a>
+                    </li>
+                </ul>    
+            </div>
+        </nav>
+
+        <div class="container" style="padding: 0px 290px 0px 300px">
+            <div class="row">
+                <div class="col">
+                    <form method="POST" action="" enctype="text/plain">
+                        <h3 style="margin-top: 20px ">Submit Project</h3>
+                        <fieldset class="form-group">
+                            <label>Project Name</label>
+                            <input class="form-control" type="text" name="title" size="74" maxlength="50" placeholder="Enter project name">
+                        </fieldset>
+                            
+                        <fieldset class="form-group">
+                            <label>Project Abstract</label>
+                            <textarea class="form-control" name="abs" size="20" maxlength="100" rows="10" cols="56"></textarea>
+                        </fieldset>
+                
+                        <fieldset class="form-group">
+                            <label>Author(s)</label>
+                            <input class="form-control" type="text" name="auth" size="74" maxlength="50" placeholder="Enter author names (separated by comma)">
+                        </fieldset>
+                
+                        <fieldset class="form-group">
+                            <label>Tag(s)</label>
+                            <input class="form-control" type="text" name="tag" size="74" maxlength="50" placeholder="Use # to tag project with different topics (e.g. #javascript #mongodb)">
+                        </fieldset>
+                
+                        <button class="btn btn-primary" type="submit" name="submit">Continue</button>
         
-                <p>
-                    Author(s):<br>
-                    <input type="text" name="auth" size="74" maxlength="50" placeholder="Enter author names (separated by comma)">
-                </p>
-        
-                <p>
-                    Tag(s):<br>
-                    <input type="text" name="tag" size="74" maxlength="50" placeholder="Use # to tag project with different topics (e.g. #javascript #mongodb)">
-                </p>
-        
-                <p>
-                    <input type="submit" name="submit" value="Continue" class="login-submit">
-                </p>
-            </form>
+                    </form>
+                </div>
+            </div>
         </div>
 
                             
-        <div id="copy" style="text-align: right">
-            <small>
-                Project Explorer &copy; 2020 . <span style="color: #000">Edconnect</span>
-            </small>
-        </div>
+        <footer>
+            <div style="background-color: lightgrey; text-align: right; margin: 20px 160px 0px 160px; padding: 5px 20px 5px 20px">
+                <small class="text-muted">
+                    Project Explorer &copy; 2020 . <span style="color: #000">Edconnect</span>
+                </small>
+            </div>
+        </footer>
     </body>
 </html>            
