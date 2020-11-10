@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { Alert } from 'react-bootstrap';
 import Layout from './shared/Layout';
 import cookie from './cookie';
 
@@ -42,7 +43,7 @@ const Login = (props) => {
                 if (res.status !== 200) {
                     var err = await res.json();
 
-                    setError(err.errors);
+                    setError("Invalid email/password");
                 }
             })
     }
@@ -58,7 +59,7 @@ const Login = (props) => {
                         <div class="col-12 col-md-8 offset-md-2">
                             <h1>Login</h1>
 
-                            { error ? <div className="alert alert-danger">Invalid email/password</div> : null }
+                            { error ? <Alert variant="danger"> { error } </Alert> : null }
                         </div>
                     </div>
 
