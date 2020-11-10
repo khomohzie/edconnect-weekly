@@ -8,7 +8,7 @@ const Login = (props) => {
 
     const [login, setLogin] = useState([]);
     const history = useHistory();
-    const [error, setError] = useState();
+    const [error, setError] = useState("");
 
     const handleInput = (event) => {
         event.preventDefault();
@@ -44,8 +44,6 @@ const Login = (props) => {
                     var err = await res.json();
 
                     setError("Invalid email/password");
-
-                    console.log(err);
 
                     return err;
                 }
