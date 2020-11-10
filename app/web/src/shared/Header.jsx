@@ -49,10 +49,10 @@ export default () => {
                             document.cookie = `uid=; expires=Thu, 01 Jan 1970T00:00:00Z`;
                             history.push("/");
                             setUserState(undefined);
-                        }} title="Logout">
+                        }} id="logout" title="Logout">
                             Logout
                             </Nav.Link>
-                        <a className="nav-link disabled-cursor active">
+                        <a className="nav-link disabled-cursor active" id="username">
                             Hi, {userState.firstname}
                         </a>
                     </Nav>

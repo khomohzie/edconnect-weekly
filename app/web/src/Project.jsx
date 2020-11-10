@@ -33,7 +33,7 @@ const Project = (props) => {
 
             <div className="container">
                 <div className="row">
-                    <h1 className="my-3"> { project.name } </h1>
+                    <h1 className="my-3" id="project_name"> { project.name } </h1>
                 </div>
                 <div className="row align-items-center profile-body">
                     <div className="col-md-10">
@@ -94,7 +94,9 @@ const Project = (props) => {
 
                             <div className="card-footer">
                                 <small className="card-tag" id="project_tags">
-
+                                    { project.tags ? project.tags.map( (tag) => (
+                                        <span className="mr-2" key={tag}> { tag } </span>
+                                    ) ) : null }
                                 </small>
                             </div>
                         </div>

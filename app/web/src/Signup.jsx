@@ -83,7 +83,7 @@ const Signup = (props) => {
 
                         <div className="row">
                             <div className="col-md-12">
-                                <form onSubmit={formSubmit} encType="text/plain" name="signupForm">
+                                <form onSubmit={formSubmit} encType="text/plain" id="signupForm" name="signupForm">
 
                                     <div className="form-group row">
                                         <div className="col-12">

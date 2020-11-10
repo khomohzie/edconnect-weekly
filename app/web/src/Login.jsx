@@ -65,7 +65,7 @@ const Login = (props) => {
 
                     <div class="row">
                         <div class="col-12 col-md-8 offset-md-2">
-                            <form onSubmit={onLogin} encType="text/plain">
+                            <form onSubmit={onLogin} encType="text/plain" id="loginForm">
                                 <fieldset class="form-group">
                                     <label for="email" class="col-form-label">Email address</label>
                                     <input class="form-control" type="email" onChange={handleInput} name="email" value={login.email} maxlength="50" placeholder="Enter email" />
