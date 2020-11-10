@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Layout from './shared/Layout';
 import cookie from './cookie';
-import { Alert } from 'react-bootstrap';
 
 const Login = (props) => {
 
@@ -59,7 +58,7 @@ const Login = (props) => {
                         <div class="col-12 col-md-8 offset-md-2">
                             <h1>Login</h1>
 
-                            { error ? <Alert variant="danger">Invalid email/password</Alert> : null }
+                            { error ? <div className="alert alert-danger">Invalid email/password</div> : null }
                         </div>
                     </div>
 

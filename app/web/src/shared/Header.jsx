@@ -14,6 +14,7 @@ export default () => {
                 .then(async function (response) {
                     const res = await response.json();
                     setUserState(res);
+                    return res;
                 })
         }
     }, [])
@@ -52,18 +53,18 @@ export default () => {
                         }} id="logout" title="Logout">
                             Logout
                             </Nav.Link>
-                        <a className="nav-link disabled-cursor active" id="username">
-                            Hi, {userState.firstname}
+                        <a className="nav-link active" id="username">
+                            Hi {userState.firstname}
                         </a>
                     </Nav>
                 ) : (
                         <Nav className="navbar-nav justify-content-end">
                             <Nav.Link href="/signup" title="Sign up">
                                 Sign up
-                             </Nav.Link>
+                            </Nav.Link>
                             <Nav.Link href="/login" title="Login Page">
                                 Login
-                             </Nav.Link>
+                            </Nav.Link>
                         </Nav>
                     )
                 }
