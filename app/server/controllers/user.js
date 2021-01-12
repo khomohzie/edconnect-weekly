@@ -9,7 +9,16 @@ router.get('/signup', (req, res) => {
 });
 
 router.post('/signup', (req, res) => {
-    const user = User.create(req.body);
+
+    const firstname = req.body.firstName
+    const lastname = req.body.lastName
+    const email = req.body.email
+    const password = req.body.password
+    const matricNumber = req.body.matricNumber
+    const program = req.body.program
+    const graduationYear = req.body.graduationYear
+
+    const user = User.create({firstname, lastname, email, password, matricNumber, program, graduationYear});
 
     if (user[0] === true) {
         req.session.user = user;
