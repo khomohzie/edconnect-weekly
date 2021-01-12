@@ -1,14 +1,10 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
 import { Alert } from 'react-bootstrap';
 import Layout from './shared/Layout';
-import cookie from './cookie';
 
 const Login = (props) => {
 
     const [login, setLogin] = useState([]);
-    const history = useHistory();
-    const [error, setError] = useState("");
 
     const handleInput = (event) => {
         event.preventDefault();
@@ -18,34 +14,8 @@ const Login = (props) => {
         })
     }
 
-    const onLogin = (event) => {
-        event.preventDefault();
-
-        fetch("/api/login", {
-            method: 'POST',
-            mode: 'cors',
-            body: JSON.stringify(login),
-            headers: {
-                "Content-Type": "application/json; charset=UTF-8"
-            }
-        })
-            .then(function (res) {
-                return res.json();
-            })
-            .then( (response) => {
-                cookie.createCookie("uid", response.data.id, "30");
-
-                history.push("/")
-
-                return response;
-            } )
-            .catch( (err) => {
-                setError("Invalid email/password");
-            } )
-    }
-
     return (
-        <Layout>
+        <Layout user={props.user}>
 
             <main role="main">
 
@@ -55,13 +25,20 @@ const Login = (props) => {
                         <div className="col-12 col-md-8 offset-md-2">
                             <h1>Login</h1>
 
-                            { error ? <Alert variant="danger"> { error } </Alert> : null }
+                            {props.errors != "" ?
+                                <Alert variant="danger">
+                                    {props.errors.map((error) => (
+                                        <p key={error}>{error}</p>
+                                    ))}
+                                </Alert> : null
+                            }
+
                         </div>
                     </div>
 
                     <div className="row">
                         <div className="col-12 col-md-8 offset-md-2">
-                            <form onSubmit={onLogin} encType="text/plain" id="loginForm">
+                            <form action="login" method="POST" id="loginForm">
                                 <fieldset className="form-group">
                                     <label htmlFor="email" className="col-form-label">Email address</label>
                                     <input className="form-control" type="email" onChange={handleInput} name="email" value={login.email || ""} maxLength="50" placeholder="Enter email" />
