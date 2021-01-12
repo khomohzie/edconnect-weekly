@@ -46,10 +46,10 @@ const Signup = (props) => {
                                                 <div className="col-12 col-md-6">
                                                     <div className="row">
                                                         <div className="col-12">
-                                                            <label htmlFor="firstName" className="col-form-label">First name</label>
+                                                            <label htmlFor="firstname" className="col-form-label">First name</label>
                                                         </div>
                                                         <div className="col-12">
-                                                            <input className="form-control" type="text" name="firstName" value={signup.firstname || ""} onChange={handleInput} maxLength="30" placeholder="First name" required />
+                                                            <input className="form-control" type="text" name="firstName" value={signup.firstName || ""} onChange={handleInput} maxLength="30" placeholder="First name" required />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -57,10 +57,10 @@ const Signup = (props) => {
                                                 <div className="col-12 col-md-6">
                                                     <div className="row">
                                                         <div className="col-12">
-                                                            <label htmlFor="lastName" className="col-form-label">Last name</label>
+                                                            <label htmlFor="lastname" className="col-form-label">Last name</label>
                                                         </div>
                                                         <div className="col-12">
-                                                            <input className="form-control" type="text" name="lastName" value={signup.lastname || ""} onChange={handleInput} maxLength="30" placeholder="Last name" required />
+                                                            <input className="form-control" type="text" name="lastName" value={signup.lastName || ""} onChange={handleInput} maxLength="30" placeholder="Last name" required />
                                                         </div>
                                                     </div>
                                                 </div>
