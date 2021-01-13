@@ -5,7 +5,7 @@ const Project = (props) => {
 
     return (
 
-        <Layout>
+        <Layout user={props.user}>
 
             <div className="container">
                 <div className="row">

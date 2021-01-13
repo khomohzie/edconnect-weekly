@@ -10,7 +10,7 @@ router.get('/projects/submit', (req, res) => {
     }
     else {
         const errors = req.flash("error");
-        res.render('CreateProject', {errors});
+        res.render('CreateProject', {errors, user: req.session.user});
     }
 })
 
@@ -41,10 +41,13 @@ router.get("/projects/:id", (req, res) => {
     const projectData = Project.getById(id);
     console.log(projectData);
 
+    // The person that created the project
     const userData = User.getById(projectData.createdBy);
     console.log(userData);
 
-    res.render("Project", { projectData: projectData, userData: userData });
+    // The owner of the account i.e the person logged in at the time
+
+    res.render("Project", { projectData: projectData, userData: userData, user: req.session.user });
 });
 
 module.exports = router

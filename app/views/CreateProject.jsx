@@ -13,7 +13,7 @@ const CreateProject = (props) => {
     }
 
     return (
-        <Layout>
+        <Layout user={props.user}>
 
             <div class="container">
                 <div class="row">

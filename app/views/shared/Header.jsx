@@ -20,7 +20,7 @@ export default ({ user }) => {
 
                 <ul className="navbar-nav mr-auto">
                     <li className="nav-item">
-                        <a className="nav-link" href="/projects" title="Projects">Projects</a>
+                        <a className="nav-link" href="/projects/qqg8jtk5iso" title="Projects">Projects</a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" href="/projects/submit" title="Submit Project">Submit</a>
@@ -34,7 +34,7 @@ export default ({ user }) => {
                             Logout
                         </Nav.Link>
                         <a className="nav-link active" id="username">
-                            Hi, {user[1].firstname}
+                            Hi, {user.firstname}
                         </a>
                     </Nav>
                 ) : (

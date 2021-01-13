@@ -9,14 +9,21 @@ router.get('/signup', (req, res) => {
 });
 
 router.post('/signup', (req, res) => {
-    const user = User.create(req.body);
+    const firstname = req.body.firstName
+    const lastname = req.body.lastName
+    const email = req.body.email
+    const password = req.body.password
+    const matricNumber = req.body.matricNumber
+    const program = req.body.program
+    const graduationYear = req.body.graduationYear
 
-    if (user[0] === true) {
+    const [signup, user] = User.create({firstname, lastname, email, password, matricNumber, program, graduationYear});
+    if(signup) {
         req.session.user = user;
         res.redirect('/');
     }
     else {
-        req.flash("error", user[1]);
+        req.flash("error", user);
         res.redirect('/signup');
     }
 });
@@ -29,14 +36,14 @@ router.post("/login", (req, res) => {
     const email = req.body.email
     const password = req.body.password
 
-    const user = User.authenticate(email, password)
-    if(user[0] === true) {
-        req.session.user = user
-        res.redirect('/')
+    const [login, user] = User.authenticate(email, password)
+    if(login) {
+        req.session.user = user;
+        res.redirect('/');
     }
     else {
-        req.flash("error", user)
-        res.redirect('/login')
+        req.flash("error", user);
+        res.redirect('/login');
     }
 });
 
