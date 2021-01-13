@@ -36,7 +36,7 @@ const Home = (props) => {
                             <Col key={project.id} xs={12} sm={12} md={3} lg={3} xl={3}>
                                 <Card className="p-3">
                                     <h5 className="card-header">
-                                        <a href={`/projects/${project.id}`}> {project.name} </a>
+                                        <a href={`/project/${project.id}`}> {project.name} </a>
                                     </h5>
                                     <small className="text-muted"> {project.authors.join(", ")} </small>
                                     <p className="card-body"> {project.abstract} </p>
