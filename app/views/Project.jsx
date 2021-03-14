@@ -1,7 +1,10 @@
 import React from 'react';
 import Layout from './shared/Layout';
 
-const Project = (props) => {
+const Project = ({ projectName, authors, abstract, tags, projectAuthor, createdAt, updatedAt }) => {
+
+    const CreatedAt = new Date(createdAt).toLocaleDateString();
+    const UpdatedAt = new Date(updatedAt).toLocaleDateString();
 
     return (
 
@@ -9,24 +12,24 @@ const Project = (props) => {
 
             <div className="container">
                 <div className="row">
-                    <h1 className="my-3" id="project_name"> {props.projectData.name} </h1>
+                    <h1 className="my-3" id="project_name"> {projectName} </h1>
                 </div>
                 <div className="row align-items-center profile-body">
                     <div className="col-md-10">
                         <div className="row">
                             <div className="col-md-4">
                                 Created by<br />
-                                <span id="project_author"> {props.userData.firstname + " " + props.userData.lastname} </span>
+                                <span id="project_author"> {projectAuthor} </span>
                             </div>
 
                             <div className="col-md-4">
                                 Date Created<br />
-                                03/03/2020
+                                {CreatedAt}
                             </div>
 
                             <div className="col-md-4">
                                 Last Updated<br />
-                                04/04/2020
+                                {UpdatedAt}
                             </div>
                         </div>
                     </div>
@@ -46,7 +49,7 @@ const Project = (props) => {
                         <h3>Project Abstract</h3>
 
                         <p id="project_abstract">
-                            {props.projectData.abstract}
+                            {abstract}
                         </p>
 
                     </div>
@@ -62,7 +65,7 @@ const Project = (props) => {
 
                             <div className="card-block">
                                 <p className="card-text" id="project_authors">
-                                    { props.projectData.authors ? props.projectData.authors.map( (author) => (
+                                    { authors ? authors.map( (author) => (
                                         <span className="d-block" key={author}>{ author }</span>
                                     ) ) : null }
                                 </p>
@@ -70,7 +73,7 @@ const Project = (props) => {
 
                             <div className="card-footer">
                                 <small className="card-tag" id="project_tags">
-                                    { props.projectData.tags ? props.projectData.tags.map( (tag) => (
+                                    { tags ? tags.map( (tag) => (
                                         <span className="mr-2" key={tag}> { tag } </span>
                                     ) ) : null }
                                 </small>

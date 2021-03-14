@@ -1,6 +1,5 @@
 const express = require('express');
 const Project = require('../services/project');
-const User = require('../services/user');
 
 const router = express.Router();
 
@@ -14,17 +13,17 @@ router.get('/projects/submit', (req, res) => {
     }
 })
 
-router.post('/projects/submit', (req, res) => {
+router.post('/projects/submit', async (req, res) => {
     const name = req.body.name;
     const abstract = req.body.abstract;
     const authors = req.body.authors;
     const tags = req.body.tags;
-    const createdBy = req.session.user.id;
+    const createdBy = req.session.user._id;
 
     const authorsArr = authors.split(', ');
     const tagsArr = tags.split(', ');
 
-    const [isCreated, result] = Project.create({name, abstract, authors, createdBy, "authors": authorsArr, "tags": tagsArr});
+    const [isCreated, result] = await Project.create({name, abstract, authors, createdBy, "authors": authorsArr, "tags": tagsArr});
 
     if(isCreated) {
         res.redirect('/');
@@ -35,19 +34,32 @@ router.post('/projects/submit', (req, res) => {
     }
 })
 
-router.get("/project/:id", (req, res) => {
-    const id = req.params.id
+router.get("/project/:id", async (req, res) => {
+    // const id = req.params.id
 
-    const projectData = Project.getById(id);
+    // const projectData = await Project.getById(id);
+    // console.log(projectData);
+
+    // // The person that created the project
+    // const userData = User.getById(projectData.createdBy);
+    // console.log(userData);
+
+    const id = req.params.id
+    const projectData = await Project.getById(id)
+
     console.log(projectData);
 
-    // The person that created the project
-    const userData = User.getById(projectData.createdBy);
-    console.log(userData);
+    const projectName = projectData.name
+    const authors = projectData.authors
+    const abstract = projectData.abstract
+    const tags = projectData.tags
 
-    // The owner of the account i.e the person logged in at the time
+    const createdAt = projectData.createdAt;
+    const updatedAt = projectData.updatedAt;
 
-    res.render("Project", { projectData: projectData, userData: userData, user: req.session.user });
+    let projectAuthor = project.createdBy.firstname + " " + project.createdBy.lastname
+
+    res.render("Project", { projectName, authors, abstract, tags, projectAuthor, createdAt, updatedAt });
 });
 
 module.exports = router

@@ -8,7 +8,7 @@ router.get('/signup', (req, res) => {
     res.render('Signup', { program: School.getPrograms(), gradYear: School.getGradYears(), errors: req.flash("error") });
 });
 
-router.post('/signup', (req, res) => {
+router.post('/signup', async (req, res) => {
     const firstname = req.body.firstName
     const lastname = req.body.lastName
     const email = req.body.email
@@ -17,7 +17,7 @@ router.post('/signup', (req, res) => {
     const program = req.body.program
     const graduationYear = req.body.graduationYear
 
-    const [signup, user] = User.create({firstname, lastname, email, password, matricNumber, program, graduationYear});
+    const [signup, user] = await User.create({firstname, lastname, email, password, matricNumber, program, graduationYear});
     if(signup) {
         req.session.user = user;
         res.redirect('/');
@@ -32,11 +32,11 @@ router.get("/login", (req, res) => {
     res.render("Login", { errors: req.flash("error") });
 });
 
-router.post("/login", (req, res) => {
+router.post("/login", async (req, res) => {
     const email = req.body.email
     const password = req.body.password
 
-    const [login, user] = User.authenticate(email, password)
+    const [login, user] = await User.authenticate(email, password)
     if(login) {
         req.session.user = user;
         res.redirect('/');

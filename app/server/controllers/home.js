@@ -3,8 +3,13 @@ const Project = require('../services/project');
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.render('Home', { project: Project.getAll(), user: req.session.user });
+router.get('/', async (req, res) => {
+
+    // add code to render the Home Component, and pass in the projects  
+
+    // as a props
+
+    res.render('Home', { project: await Project.getAll(), user: req.session.user });
 });
 
 router.get("/logout", (req, res) => {
