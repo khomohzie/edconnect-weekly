@@ -57,9 +57,9 @@ router.get("/project/:id", async (req, res) => {
     const createdAt = projectData.createdAt;
     const updatedAt = projectData.updatedAt;
 
-    let projectAuthor = project.createdBy.firstname + " " + project.createdBy.lastname
+    let projectAuthor = projectData.createdBy.firstname + " " + projectData.createdBy.lastname
 
-    res.render("Project", { projectName, authors, abstract, tags, projectAuthor, createdAt, updatedAt });
+    res.render("Project", { projectName, authors, abstract, tags, projectAuthor, createdAt, updatedAt, user: req.session.user });
 });
 
 module.exports = router

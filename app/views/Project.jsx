@@ -1,14 +1,14 @@
 import React from 'react';
 import Layout from './shared/Layout';
 
-const Project = ({ projectName, authors, abstract, tags, projectAuthor, createdAt, updatedAt }) => {
+const Project = ({ projectName, authors, abstract, tags, projectAuthor, createdAt, updatedAt, user }) => {
 
     const CreatedAt = new Date(createdAt).toLocaleDateString();
     const UpdatedAt = new Date(updatedAt).toLocaleDateString();
 
     return (
 
-        <Layout user={props.user}>
+        <Layout user={user}>
 
             <div className="container">
                 <div className="row">
